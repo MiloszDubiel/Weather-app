@@ -10,7 +10,7 @@ async function getLocation(location) {
 
 const Main = props => {
   let searchBar
-  let [weather, setWeather] = useState('')
+  let [weather, setWeather] = useState(' ')
 
   async function findCity() {
     let response = await getLocation(searchBar.value)
