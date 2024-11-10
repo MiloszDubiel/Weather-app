@@ -1,6 +1,5 @@
 import React, { useEffect, useState} from "react";
 import NextDays from "./NextDays";
-import { WiCloud, WiStrongWind, WiRaindrop, WiBarometer, WiDaySunny, WiDayCloudy, WiDayRain, WiDaySnow, WiDayThunderstorm } from 'react-icons/wi';
 import CurrentWeather from "./CurrentWeather";
 
 async function getLocation(location) {
@@ -36,13 +35,10 @@ const Main = props => {
 
   return (
     <div className="container">
-      {/* Nagłówek */}
       <header className="text-center mb-5">
         <h1 className="display-4">Weather App</h1>
         <p className="lead">Current weather for your location</p>
       </header>
-
-      {/* Pasek wyszukiwania */}
       <div className="row justify-content-center mb-4">
         <div className="col-md-6">
           <div className="input-group">
@@ -58,7 +54,7 @@ const Main = props => {
         </div>
       </div>
         {weather}
-      {/* Prognoza na następne 5 dni */}
+
       <div className="row justify-content-center mt-5">
         <div className="col-md-10">
           <div className="row">

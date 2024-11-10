@@ -1,5 +1,5 @@
 import React from "react";
-import { WiCloud, WiStrongWind, WiRaindrop, WiBarometer, WiDaySunny, WiDayCloudy, WiDayRain, WiDaySnow, WiDayThunderstorm } from 'react-icons/wi';
+import { WiStrongWind, WiRaindrop, WiBarometer } from 'react-icons/wi';
 const CurrentWeather = ({element, city_name }) =>{
   let img = require(`../Icons/${element.weather.icon}.png`)
     return(
@@ -7,7 +7,7 @@ const CurrentWeather = ({element, city_name }) =>{
         <div className="col-md-6">
           <div className="card weather-card text-center p-4">
             <div className="weather-icon mb-3">
-              <img src={img} />
+              <img src={img} style={{height: '50px'}}/>
             </div>
             <h2 className="city-name">{city_name}</h2>
             <p className="temp">{element.temp}°C</p>

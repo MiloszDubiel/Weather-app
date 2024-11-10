@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { WiCloud, WiStrongWind, WiRaindrop, WiBarometer, WiDaySunny, WiDayCloudy, WiDayRain, WiDaySnow, WiDayThunderstorm } from 'react-icons/wi';
-
 const NextDays = ({ data }) =>{
     let [weathers, setWeathers] = useState('')
-    let [ firistDay, ...nextDays] = data
-    
+    let [ , ...nextDays] = data
        useEffect(()=>{
-            nextDays = data.map((element, index)=>{
+           let weather = nextDays.map((element, index)=>{
                 let date = new Date(element.datetime)
                 const days = ['Sunday', 'Monday', 'Tuesday', 'Wendesday', 'Thursday', 'Friday', 'Saturday'] 
                 let img = require(`../Icons/${element.weather.icon}.png`)
@@ -21,10 +18,8 @@ const NextDays = ({ data }) =>{
                 </div>
             )
         })
-        setWeathers(nextDays)
+        setWeathers(weather)
        },[data])     
-            
        return weathers
-    
 }
 export default NextDays
