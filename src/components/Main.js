@@ -48,6 +48,10 @@ const Main = props => {
               placeholder="Type name of the city..."
               aria-label="Type name of the city..."
               id='search'
+              onKeyDown={(e)=>{
+                if(e.key === 'Enter')
+                  findCity()
+              }}
             />
             <button className="btn btn-secondary" type="button" onClick={findCity}>Search</button>
           </div>
